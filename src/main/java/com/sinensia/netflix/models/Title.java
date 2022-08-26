@@ -6,8 +6,10 @@ import javax.persistence.*;
 
 import lombok.*;
 
-@Data
-@NoArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name="title")
 public class Title {
