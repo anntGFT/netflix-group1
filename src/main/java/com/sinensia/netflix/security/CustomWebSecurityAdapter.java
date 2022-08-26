@@ -3,6 +3,7 @@ package com.sinensia.netflix.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -27,20 +28,9 @@ public class CustomWebSecurityAdapter{
                 .csrf().disable()
 
                 .authorizeRequests()
-                .antMatchers("/").permitAll()
-                .antMatchers("/title/create").authenticated()
-                .antMatchers("/title/update").authenticated()
-                .antMatchers("/title/delete").hasAnyAuthority("ROLE_ADMIN")
-                .antMatchers("/actor/create").authenticated()
-                .antMatchers("/actor/update").authenticated()
-                .antMatchers("/actor/delete").hasAnyAuthority("ROLE_ADMIN")
-                .antMatchers("/category/create").authenticated()
-                .antMatchers("/category/update").authenticated()
-                .antMatchers("/category/delete").hasAnyAuthority("ROLE_ADMIN")
-                .antMatchers("/director/create").authenticated()
-                .antMatchers("/director/update").authenticated()
-                .antMatchers("/director/delete").hasAnyAuthority("ROLE_ADMIN")
-                .anyRequest().permitAll()
+                .antMatchers(HttpMethod.GET).permitAll()
+                .antMatchers(HttpMethod.DELETE).hasAnyAuthority("ROLE_ADMIN")
+                .anyRequest().authenticated()
                 .and()
                 .httpBasic();
 
