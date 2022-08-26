@@ -19,7 +19,7 @@ public class DirectorController {
 
 
     @GetMapping("/director/name/{name}")
-    public List<Director> getCategoryByName(@PathVariable String name) {
+    public List<Director> getDirectorByName(@PathVariable String name) {
 
         List<Director> directorByName = directorRepository.findAll().parallelStream()
 
