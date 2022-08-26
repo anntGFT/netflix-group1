@@ -10,8 +10,10 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Positive;
 import lombok.*;
 
-@Data
-@NoArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name="title")
 public class Title {

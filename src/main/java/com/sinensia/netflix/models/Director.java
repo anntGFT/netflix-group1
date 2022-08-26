@@ -4,8 +4,10 @@ import javax.persistence.*;
 
 import lombok.*;
 
-@Data
-@NoArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name="director")
 public class Director {

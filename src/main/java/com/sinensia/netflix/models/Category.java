@@ -5,8 +5,10 @@ import javax.persistence.*;
 import com.sun.istack.NotNull;
 import lombok.*;
 
-@Data
-@NoArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name="category")
 public class Category {
