@@ -26,7 +26,7 @@ public class Title {
 
     @ManyToMany(fetch = FetchType.LAZY,
     cascade = {
-        CascadeType.PERSIST,
+        CascadeType.PERSIST, 
         CascadeType.MERGE
     })
     @JoinTable(name = "title_director",
