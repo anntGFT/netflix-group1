@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Repository
 public interface ActorRepository extends JpaRepository <Actor, String>{
 
-    @RestResource(path="name", rel="name")
+    @RestResource(path="/actors", rel="actors")
     List<Actor> findByNameContains(@Param("q") String name);
 
 }
