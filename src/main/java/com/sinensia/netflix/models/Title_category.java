@@ -11,7 +11,7 @@ public class Title_category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @ManyToMany
+    @OneToMany
     @JoinColumn(name = "title_id")
     private Title title;
 
