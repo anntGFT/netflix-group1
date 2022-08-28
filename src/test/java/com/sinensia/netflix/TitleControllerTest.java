@@ -20,7 +20,7 @@ public class TitleControllerTest {
 
     @Test
     void testFindbyNameContains() throws Exception{
-        mockMvc.perform(get("/titles/name/Dick Johnson Is Dead")
+        mockMvc.perform(get("/titles/1")
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(status().isOk())
                         .andExpect(jsonPath("$.[0].id",is(1)))

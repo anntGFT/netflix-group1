@@ -23,7 +23,7 @@ public class CategoryController {
 
         List<Category> categoryByName = categoryRepository.findAll().parallelStream()
 
-            .filter(x -> x.getName().toLowerCase().contains(name.toLowerCase()))
+            .filter(x -> x.getName().toUpperCase().contains(name.toUpperCase()))
 
             .collect(Collectors.toList());
 

@@ -27,5 +27,10 @@ public class DirectorControllerTest {
                         .andExpect(jsonPath("$.[0].name",is(("Kirsten Johnson"))));
 
     }
-
+    @Test
+    void testFindbyId() throws Exception{
+        mockMvc.perform(get("/directors/name/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
 }
