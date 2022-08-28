@@ -2,7 +2,7 @@ package com.sinensia.netflix.models;
 
 import javax.persistence.*;
 
-import com.sun.istack.NotNull;
+import javax.validation.constraints.NotNull;
 import lombok.*;
 
 @RequiredArgsConstructor
