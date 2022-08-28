@@ -23,8 +23,8 @@ public class DirectorControllerTest {
         mockMvc.perform(get("/directors/name/Kirsten Johnson")
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(status().isOk())
-                        .andExpect(jsonPath("$.id",is(1)))
-                        .andExpect(jsonPath("$.name",is(("Kirsten Johnson"))));
+                        .andExpect(jsonPath("$.[0].id",is(1)))
+                        .andExpect(jsonPath("$.[0].name",is(("Kirsten Johnson"))));
 
     }
 

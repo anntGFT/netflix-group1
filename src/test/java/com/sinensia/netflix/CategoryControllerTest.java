@@ -23,8 +23,8 @@ public class CategoryControllerTest {
         mockMvc.perform(get("/category/name/Documentaries")
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(status().isOk())
-                        .andExpect(jsonPath("$.id",is(1)))
-                        .andExpect(jsonPath("$.name",is(("Documentaries"))));
+                        .andExpect(jsonPath("$.[0].id",is(1)))
+                        .andExpect(jsonPath("$.[0].name",is(("Documentaries"))));
 
     }
 }

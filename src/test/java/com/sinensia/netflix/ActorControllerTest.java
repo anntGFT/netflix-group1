@@ -22,8 +22,8 @@ public class ActorControllerTest {
         mockMvc.perform(get("/actors/name/Ama Qamata")
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(status().isOk())
-                        .andExpect(jsonPath("$.id",is(1)))
-                        .andExpect(jsonPath("$.name",is(("Ama Qamata"))));
+                        .andExpect(jsonPath("$.[0].id",is(1)))
+                        .andExpect(jsonPath("$.[0].name",is(("Ama Qamata"))));
 
     }
 

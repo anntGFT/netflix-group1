@@ -23,8 +23,8 @@ public class TitleControllerTest {
         mockMvc.perform(get("/titles/name/Dick Johnson Is Dead")
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(status().isOk())
-                        .andExpect(jsonPath("$.id",is(1)))
-                        .andExpect(jsonPath("$.name",is(("Dick Johnson Is Dead"))));
+                        .andExpect(jsonPath("$.[0].id",is(1)))
+                        .andExpect(jsonPath("$.[0].name",is(("Dick Johnson Is Dead"))));
 
     }
 
