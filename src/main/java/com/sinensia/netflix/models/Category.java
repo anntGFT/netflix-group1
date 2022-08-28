@@ -2,6 +2,7 @@ package com.sinensia.netflix.models;
 
 import javax.persistence.*;
 
+import javax.validation.constraints.NotNull;
 import lombok.*;
 
 @RequiredArgsConstructor
@@ -15,5 +16,6 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Integer id;
+    @NotNull
     private String name;
 }

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sinensia.netflix.models.Title;
 import com.sinensia.netflix.repository.TitleRepository;
 
+import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 public class TitleController {
 
